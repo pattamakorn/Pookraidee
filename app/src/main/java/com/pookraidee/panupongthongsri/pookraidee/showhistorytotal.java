@@ -38,7 +38,6 @@ public class showhistorytotal extends Fragment {
     private List<Shistory> listhistory;
     private String Url_Loadhistory = "http://203.154.83.137/puklaidee/loadhistory.php";
     private String datau;
-    SessionManager sessionManager;
 
 
 
@@ -54,18 +53,12 @@ public class showhistorytotal extends Fragment {
         recyclerView = v.findViewById(R.id.recycler);
         historyAdapter HistoryAdapter = new historyAdapter(getContext(),listhistory);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+
         recyclerView.setAdapter(HistoryAdapter);
 
         Bundle b3 = getArguments();
         datau = b3.getString("myusername");
-//        sessionManager = new SessionManager(getContext());
-//        HashMap<String,String> user = sessionManager.getUserDetail();
-//        datau = user.get(sessionManager.NAME);
-//        Bundle bundle = getArguments();
-//        if(bundle != null) {
-//            datau = bundle.getString("username");
-//            Toast.makeText(getActivity(),datau, Toast.LENGTH_SHORT).show();
-//        }
         return v;
     }
 

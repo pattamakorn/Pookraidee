@@ -57,6 +57,8 @@ public class historyAdapter extends RecyclerView.Adapter<historyAdapter.MyViewHo
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            
+
             stree = itemView.findViewById(R.id.start_tree);
             etree = itemView.findViewById(R.id.end_tree);
             nntree = itemView.findViewById(R.id.stree_name);
